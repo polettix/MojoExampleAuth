@@ -1,0 +1,14 @@
+<footer>
+<p>Links to play with:</p>
+<ul>
+  <li><%= link_to '(protected) home' => '/' %>
+    (requires authentication, redirects to <%= link_to 'public home' => 'public_root' %> otherwise)</li>
+  <li><%= link_to 'protected other' => '/other' %>
+    (requires authentication, redirects to <%= link_to 'public home' => 'public_root' %> otherwise)</li>
+  <li><%= link_to 'missing but protected page' => '/missing' %>
+    (requires authentication, redirects to <%= link_to 'public home' => 'public_root' %> otherwise)</li>
+  <li><%= link_to 'public home' => '/public' %></li>
+  <li><%= link_to 'public other' => '/public/other' %></li>
+  <li><%= link_to 'missing but public page' => '/public/missing' %></li>
+</ul>
+</footer>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- vim: ts=2 sts=2 sw=2 et ai :
+-->
+<html>
+  <head>
+    <title>MyApp</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+%= include 'header'
+%= include 'flash'
+    <div id="content"><%= content %></div>
+%= include 'footer'
+  </body>
+</html>

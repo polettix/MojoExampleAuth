@@ -1,0 +1,16 @@
+% my $site_title = 'Mojo Example Auth';
+% my $account = $c->current_user;
+<header<% if ($account) { %> class="authenticated"<% } %>>
+%= link_to $site_title => '/' => class => 'site-title'
+% if ($account) {
+<span style="font-weight: bold">Authenticated</span>
+<em><%= $account->{name} %></em> (<%= link_to logout => '/logout' %>)
+% } else {
+<span style="font-weight: bold">Not Authenticated</span>
+%= form_for '/login' => (method => 'post') => begin
+%=    text_field     username => placeholder => 'username...'
+%=    password_field password => placeholder => 'password...'
+%=    submit_button 'log in' 
+%= end
+% }
+</header>

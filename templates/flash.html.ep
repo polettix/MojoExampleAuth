@@ -1,0 +1,3 @@
+% if (defined(my $message = flash('message'))) {
+<div id="flash" class="<%= flash('status'); %>"><%= $message; %></div>
+% }
